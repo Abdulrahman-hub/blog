@@ -1,0 +1,23 @@
+{
+  "name": "blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "devStart": "nodemon server.js"
+  },"repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abdulrahman-hub/blog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abdulrahman-hub/blog/issues"
+  },
+  "homepage": "https://github.com/Abdulrahman-hub/blog#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
