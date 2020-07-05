@@ -1,5 +1,5 @@
 <h3><%= article.title %> </h3>
 <div><%= article.createdAt.toLocaleDateString() %></div>
-<a href="/articles/edit/<%= article.slug %>">Edit</a>
+<a href="/articles/edit/<%= article.id %>">Edit</a>
 <div><%= article.description %> </div>
 <div><%- article.sanitizedHtml %></div>
