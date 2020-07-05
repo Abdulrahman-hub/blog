@@ -1,1 +1,13 @@
-<h2>the index</h2>
+<h1>Blog Articles</h1>
+<a href="articles/new">New Article</a>
+<% articles.forEach(article => { %> 
+    <div class="article-preview">
+        <h3><%= article.title %></h3>
+        <div><%= article.createdAt.toLocaleDateString() %></div>
+        <div><%= article.description %></div>
+        <a href="articles/<%= article.slug %>">Read</a>
+        <form action="articles/<%= article.id %>?_method=DELETE" method="POST">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+<% }) %> 
