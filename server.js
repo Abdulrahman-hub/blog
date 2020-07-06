@@ -18,6 +18,7 @@ app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
+app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
     const articles = await Article.find().sort({ createdAt: 'desc'})
