@@ -1,0 +1,44 @@
+.form-title {
+    margin-bottom: 2rem;
+}
+
+.form-group > label {
+    display: block;
+    margin-bottom: .5rem;
+}
+
+.form-group > input,
+.form-group > textarea {
+    margin-bottom: .5rem;
+    width: 100%;
+}
+
+
+.form-group > textarea {
+    resize: none;
+}
+
+#description {
+    height: 4rem;
+}
+
+#markdown {
+    height: 35vh;
+}
+
+.btn-group {
+    margin: 1rem;
+    text-align: end;
+}
+
+.cancel-btn {
+    color: rgb(223, 209, 209);
+    background: #696565;
+    padding: .7rem; 
+}
+
+.save-btn {
+    color: white;
+    background: green;
+    padding: .7rem 1rem;
+}

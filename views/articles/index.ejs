@@ -1,13 +1,18 @@
-<h1>Blog Articles</h1>
-<a href="articles/new">New Article</a>
-<% articles.forEach(article => { %> 
-    <div class="article-preview">
-        <h3><%= article.title %></h3>
-        <div><%= article.createdAt.toLocaleDateString() %></div>
-        <div><%= article.description %></div>
-        <a href="articles/<%= article.slug %>">Read</a>
-        <form action="articles/<%= article.id %>?_method=DELETE" method="POST">
-            <button type="submit">Delete</button>
+<h1 class="blog-title">Blog Articles</h1>
+<a class="btn new-article-btn" href="articles/new">New Article</a>
+<% articles.forEach(article => { %>
+<div class="article-card">
+    <h3 class="card-title">
+        <a class="title-link" href="articles/<%= article.slug %>">
+            <%= article.title %>
+        </a>
+    </h3>
+    <div class="card-description"><%= article.description %></div>
+    <div class="date-btn-section">
+        <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
+        <form class="delete-form" action="articles/<%= article.id %>?_method=DELETE" method="POST">
+            <button class="btn btn-danger" type="submit">Delete</button>
         </form>
     </div>
-<% }) %> 
+</div>
+<% }) %>

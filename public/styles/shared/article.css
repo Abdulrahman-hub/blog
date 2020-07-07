@@ -1,0 +1,41 @@
+.article-title {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.date-btn-section {
+    padding: .5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.article-date {
+    letter-spacing: .1rem;
+}
+
+.edit-btn {
+    background: rgb(0, 110, 255);
+    padding: .5rem .8rem;
+    color: white;
+}
+
+.article-description {
+    color: #555;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+    font-weight: lighter;
+    border-bottom: 1px solid rgba(119, 119, 119, 0.5);
+}
+
+.article-body > p{
+    text-align: justify;
+    line-height: 1.3rem;
+    word-spacing: .1rem;
+}
+
+.article-body > h1 {
+    margin: 1rem 0;
+    font-weight: 500;
+}
+

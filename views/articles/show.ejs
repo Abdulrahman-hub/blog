@@ -1,5 +1,7 @@
-<h3><%= article.title %> </h3>
-<div><%= article.createdAt.toLocaleDateString() %></div>
-<a href="/articles/edit/<%= article.id %>">Edit</a>
-<div><%= article.description %> </div>
-<div><%- article.sanitizedHtml %></div>
+<h1 class="article-title"><%= article.title %> </h3>
+    <div class="date-btn-section">
+        <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
+        <a class="btn edit-btn" href="/articles/edit/<%= article.id %>">Edit</a>
+    </div>
+    <div class="article-description"><%= article.description %> </div>
+    <div class="article-body"><%- article.sanitizedHtml %></div>
