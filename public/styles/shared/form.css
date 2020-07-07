@@ -32,13 +32,13 @@
 }
 
 .cancel-btn {
-    color: rgb(223, 209, 209);
-    background: #696565;
+    color: #40514e;
     padding: .7rem; 
 }
 
 .save-btn {
-    color: white;
-    background: green;
+    color: #40514e;
+    border: 1px solid #30e3ca;
     padding: .7rem 1rem;
+    background: transparent;
 }

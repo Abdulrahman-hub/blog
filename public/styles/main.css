@@ -1,11 +1,6 @@
 @import 'shared/form.css';
 @import 'shared/article.css';
 
-:root {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 100%;
-    color: hsla(0,0%,0%,0.9);
-}
 
 *,
 *::after,
@@ -15,62 +10,87 @@
     padding: 0;
 }
 
-body {
-    background: rgba(153, 153, 153, 0.137);
+:root {
+    color: #40514e;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    background: #f5f5f5;
 }
 
-.container {
+.header-container {
+    max-width: 95%;
+    margin: 0 auto 1rem auto;
+    padding: 1rem .5rem;
+    max-width: 60rem;
+    border-bottom: 1px solid #73807d;
+}
+
+.blog-name {
+    text-decoration: none;    
+    font-size: 2rem;
+    font-weight: 600;
+    color: #2f89fc;
+}
+
+main {
     max-width: 42rem;
     margin: auto;
     padding: 2.5rem 1.5rem;
 }
 
-.blog-title {
-    font-size: 2rem;
-    font-weight: 900;
-    line-height: 4rem;
-    margin-bottom: 2rem 0;
-}
+
 
 .btn {
     font-size: 1.2rem;
     font-family: 'Montserrat', sans-serif;
     text-decoration: none;
     border-radius: .3rem;
-    border: none;
     cursor: pointer;
 }
 
 .new-article-btn {
     font-weight: 500;
     display: inline-block;
-    color: white;
-    background: green;
+    color: #40514e;
+    border: 1px solid #30e3ca;
     padding: .7rem;
 }
 
 .article-card {
+    display: block;
+    position: relative;
+    text-decoration: none;
     margin-top: 1rem;
     padding: 1rem;
-    border-radius: .3rem;
-}
-
-.title-link {
-    text-decoration: none;
-    color: blue;
+    border: 1px solid #adbbb8;
+    cursor: pointer;
+    padding-bottom: 1.3rem;
 }
 
 .card-title {
     margin-bottom: .5rem;
     font-size: 1.2rem;
+    color: #40514e;
 }
 
 .btn-danger {
     padding: .3rem;
-    background: rgb(223, 90, 72);
-    color: rgba(0, 0, 0, 0.603);
+    color: lightcoral;
+    border: 1px solid #adbbb8;
+    background: transparent;
+
 }
 
 .card-description {
-    color: #555;
+    color: #73807d;
+    margin-bottom: .5rem;
+    font-size: 1rem;
+}
+
+.card-date {
+    color: #40514e;
+    letter-spacing: .2rem;
+    position: absolute;    
+    right: 1rem;
+    bottom: .3rem;
 }

@@ -3,5 +3,4 @@
         <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
         <a class="btn edit-btn" href="/articles/edit/<%= article.id %>">Edit</a>
     </div>
-    <div class="article-description"><%= article.description %> </div>
     <div class="article-body"><%- article.sanitizedHtml %></div>
