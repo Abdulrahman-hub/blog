@@ -6,10 +6,10 @@ const methodOverride = require('method-override')
 const Article = require('./models/article')
 
 mongoose.connect('mongodb://localhost/blog', {
-     useNewUrlParser: true,
-     useUnifiedTopology: true,
-     useCreateIndex: true
-    })
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+})
 
 const articleRouter = require('./routes/articles')
 
@@ -21,8 +21,16 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
-    const articles = await Article.find().sort({ createdAt: 'desc'})
-    res.render('articles/index', {articles: articles})
+    let query = Article.find()
+    console.log(query)
+    if (req.query.title != null && req.query.title != "") {
+            query = query.regex('title', new RegExp(req.query.title, 'i'))
+        }
+        const articles = await query.exec()
+        res.render('articles/index', {
+            articles: articles,
+            searchOptions: req.query
+        })
 })
 
 app.use('/articles', articleRouter)
