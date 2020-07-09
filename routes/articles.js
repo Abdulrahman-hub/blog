@@ -4,7 +4,7 @@ const Article = require('./../models/article')
 
 // new Article route
 router.get('/new', (req, res) => {
-    res.render('articles/new', { article: new Article() })
+    res.render('articles/new', { article: new Article(), searchOptions: req.query })
 })
 
 // Create Article route
@@ -17,13 +17,13 @@ router.post('/', async (req, res, next) => {
 router.get('/:slug', async (req, res) => {
     const article = await Article.findOne({ slug: req.params.slug})
     if (article == null) res.redirect('/')
-    res.render('articles/show', { article: article })
+    res.render('articles/show', { article: article, searchOptions: req.query })
 })
 
 // edit Article route
 router.get('/edit/:id', async (req, res) => {
     const article = await Article.findById(req.params.id)
-    res.render('articles/edit', { article: article })
+    res.render('articles/edit', { article: article, searchOptions: req.query })
 })
 
 // update Article route
@@ -51,7 +51,8 @@ function saveArticleAndRedirect(path) {
         } catch (e) {
             res.render(`articles/${path}`, {
                 article: article,
-                errorMessage: "Error Creating an Article!"
+                errorMessage: "Error Creating an Article!",
+                searchOptions: req.query
             })
         }
     }

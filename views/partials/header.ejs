@@ -1,8 +1,17 @@
-<div class="header-container">
-    <a href="/" class="blog-name">Simple Blog</a>
-    <div class="search-bar">
-        <form action="/" method="GET">
-            <input type="text" name="title"  value="<%= searchOptions.title %>">
-        </form>
+<div class="container mb-4 bg-dark py-lg-3 py-2 rounded">
+    <div class="row justify-content-between no-gutters">
+        <a href="/" class="text-decoration-none h1 text-light">Simple Blog</a>
+        <% if (locals.searchOptions != null) { %>
+        <div class="align-self-center col-sm-6 col-md-5 col-lg-4 mt-2">
+            <form id="search" action="/" method="GET">
+            </form>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <button form="search" class="btn btn-light" type="submit">Search</button>
+                </div>
+                <input form="search" class="form-control bg-transparent text-light" type="text" name="title" value="<%= searchOptions.title %>">
+            </div>
+        </div>
+        <% } %>
     </div>
 </div>

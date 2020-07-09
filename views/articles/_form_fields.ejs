@@ -1,16 +1,25 @@
 <div class="form-group">
     <label for="title">Title</label>
-    <input required value="<%= article.title %> " type="text" name="title" id="title">
+    <input class="form-control shadow" required value="<%= article.title %> " type="text" name="title"
+        id="title">
+    <div class="invalid-feedback">
+        Article must have a title
+    </div>
 </div>
 <div class="form-group">
     <label for="description">Description</label>
-    <textarea name="description" id="description"><%= article.description %></textarea>
+    <textarea class="form-control shadow" name="description" id="description"><%= article.description %></textarea>
 </div>
 <div class="form-group">
     <label for="markdown">Markdown</label>
-    <textarea required name="markdown" id="markdown"><%= article.markdown %></textarea>
+    <textarea class="form-control shadow" rows="6" required name="markdown"
+        id="markdown"><%= article.markdown %></textarea>
+    <div class="invalid-feedback">
+        you didn't write any content
+    </div>
 </div>
-<div class="btn-group">
-    <a class="btn cancel-btn" href="/">Cancel</a>
-    <button type="submit" class="btn save-btn">Save</button>
+<div class="d-flex justify-content-end">
+    <a class="btn btn-outline-secondary" href="/">Cancel</a>
+    <button type="submit" class="btn btn-outline-primary mx-3">Save</button>
 </div>
+<script src="javascript/form.js"></script>

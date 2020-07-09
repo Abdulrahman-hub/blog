@@ -1,6 +1,8 @@
-<h1 class="article-title"><%= article.title %> </h3>
-    <div class="date-btn-section">
-        <div class="article-date"><%= article.createdAt.toLocaleDateString() %></div>
-        <a class="btn edit-btn" href="/articles/edit/<%= article.id %>">Edit</a>
+<div class="container">
+    <div class="d-flex justify-content-between">
+        <h3 class="article-title ml-lg-2 align-self-baseline"><%= article.title %></h3>
+        <a class="btn btn-primary align-self-baseline" href="/articles/edit/<%= article.id %>">Edit</a>
     </div>
-    <div class="article-body"><%- article.sanitizedHtml %></div>
+    <div class="article-date text-muted ml-3"><%= article.createdAt.toLocaleDateString() %></div>
+    <div class="article-body container m-2 bg-light border-top border-secondary py-4"><%- article.sanitizedHtml %></div>
+</div>

@@ -21,8 +21,7 @@ app.use(methodOverride('_method'))
 app.use(express.static('public'))
 
 app.get('/', async (req, res) => {
-    let query = Article.find()
-    console.log(query)
+    let query = Article.find().sort({createdAt: 'desc'})
     if (req.query.title != null && req.query.title != "") {
             query = query.regex('title', new RegExp(req.query.title, 'i'))
         }
